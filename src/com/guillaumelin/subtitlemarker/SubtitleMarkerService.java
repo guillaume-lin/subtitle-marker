@@ -63,10 +63,18 @@ public class SubtitleMarkerService extends Service{
     	wm.addView(myFV, wmParams);
     	Log.d("Subtitle","showed");
     }
-
+    private void removeView(){
+    	wm.removeView(myFV);
+    	myFV = null;
+    }
     @Override
     public int onStartCommand(Intent intent, int flags, int startId){
-    	createView();
+    	if(intent != null && intent.getBooleanExtra("remove", false) == true){
+    		if(myFV != null)
+    			removeView();
+    		this.stopSelf();
+    	}else
+    		createView();
     	return START_STICKY;
     }
 

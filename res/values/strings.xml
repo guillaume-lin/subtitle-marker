@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Subtitle marker</string>
+    <string name="app_name">美剧字幕遮盖器</string>
+    <string name="app_desc">本应用用来在观看美剧时，遮挡掉不想看的中文字幕，帮助观看者营造一个完全的英语环境，提高英语听力的理解能力。\n开始遮盖后，会在屏幕下方生成一个黑条，遮挡住中文字幕。\n可以通过鼠标拖动黑条移动位置</string>
+    <string name="app_author">联系作者: 14100634@qq.com</string>
     <string name="hello_world">Hello world!</string>
+    <string name="app_start">开始遮盖</string>
+    <string name="app_stop">取消遮盖</string>
+    <string name="app_close">退出该界面</string>
     <string name="action_settings">Settings</string>
 
 </resources>
