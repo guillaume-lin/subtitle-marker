@@ -18,6 +18,7 @@ import org.apache.http.protocol.HttpContext;
 import com.guillaumelin.subtitlemarker.R.id;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -107,7 +108,11 @@ public class ConfigActivity extends Activity {
 		Uri uri = Uri.parse("http://www.wushiyin.com/subtitle_marker");
 		
 		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-		this.startActivity(intent);
+		try{
+			this.startActivity(intent);
+		}catch(ActivityNotFoundException anf){
+			
+		}
 	}
 	public void onResume(){
 		super.onResume();
