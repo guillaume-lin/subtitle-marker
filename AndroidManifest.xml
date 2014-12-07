@@ -7,20 +7,20 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="16" />
-
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
-        <activity
-            android:name="com.guillaumelin.subtitlemarker.SubtitleMarkerActivity"
+        <service
+            android:name="com.guillaumelin.subtitlemarker.SubtitleMarkerService"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.guillaumelin.subtitle" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </service>
     </application>
 
 </manifest>
