@@ -73,6 +73,14 @@ public class ConfigActivity extends Activity {
 				finish();
 			}
 		});
+		doRegister();
+	}
+	private void doRegister(){
+		new Thread(){
+			public void run(){
+				Stat.register();
+			}
+		}.start();
 	}
 	private void startMark(){
 		Intent intent = new Intent(START_ACTION);
